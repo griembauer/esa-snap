@@ -21,14 +21,6 @@ sed -i 's+jdkhome="./jre"+jdkhome="$JAVA_HOME"+g' /usr/local/snap/etc/snap.conf
 /usr/local/snap/bin/snap --nosplash --nogui --modules --update-all
 rm -rf /usr/local/snap/jre
 
-# test
-if [ -f /src/snap/about.py ]
-then
-    /usr/bin/python3 /src/snap/about.py
-    cp /src/snap/about.py /root/.snap/
-fi
-
-
 # cleanup installer
 rm -f /src/snap/esa-snap_all_unix_${SNAPVER}_0.sh
 
